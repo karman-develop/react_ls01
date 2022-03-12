@@ -1,9 +1,22 @@
-export const List = (props: { title: string }) => {
-  const title = props.title
+const LANGUAGES: string[] = [
+  'Js',
+  'C#',
+  'Ruby',
+  'PHP',
+  'Go'
+]
+
+export const List = () => {
+
   return (
     <div>
-      {title}
-      リストです。
+      {
+        LANGUAGES.map((lang, index) => {
+          return (
+            <div key={index}>{lang}</div>
+          )
+        })
+      }
     </div>
   )
 }
