@@ -1,17 +1,11 @@
-const LANGUAGES: string[] = [
-  'Js',
-  'C#',
-  'Ruby',
-  'PHP',
-  'Go'
-]
+import { Ilangs } from "./types"
 
-export const List = () => {
+export const List = ({ langsParent }: Ilangs) => {
 
   return (
     <div>
       {
-        LANGUAGES.map((lang, index) => {
+        langsParent.map((lang, index) => {
           return (
             <div key={index}>{lang}</div>
           )
